@@ -1,7 +1,7 @@
 JSR 385 for USCS
 ================
 
-Unit of Measurement API 2.0 for USCS https://en.wikipedia.org/wiki/United_States_customary_units
+Unit Extensions of Measurement API 2.0 for USCS https://en.wikipedia.org/wiki/United_States_customary_units
 
 # USCS
 
