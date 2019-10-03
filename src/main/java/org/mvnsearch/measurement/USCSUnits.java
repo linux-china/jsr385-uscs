@@ -8,6 +8,7 @@ import tech.units.indriya.unit.Units;
 
 import javax.measure.Quantity;
 import javax.measure.Unit;
+import javax.measure.quantity.Area;
 import javax.measure.quantity.Length;
 import javax.measure.spi.SystemOfUnits;
 
@@ -45,6 +46,13 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Length> YARD = addUnit(new TransformedUnit<>("yd", Units.METRE, MultiplyConverter.of(0.9144)), Length.class);
     public static final Unit<Length> MILE = addUnit(new TransformedUnit<>("mi", Units.METRE, MultiplyConverter.of(1609.344)), Length.class);
 
+    // //////////////
+    // Area //
+    // //////////////
+    public static final Unit<Area> SQUARE_FOOT = addUnit(new TransformedUnit<>("ft2", Units.SQUARE_METRE, MultiplyConverter.of(0.09290341)), Area.class);
+    public static final Unit<Area> ACRE = addUnit(new TransformedUnit<>("acre", Units.SQUARE_METRE, MultiplyConverter.of(4046.873)), Area.class);
+    public static final Unit<Area> SECTION = addUnit(new TransformedUnit<>("section", Units.SQUARE_METRE, MultiplyConverter.of(2589998)), Area.class);
+    public static final Unit<Area> TOWNSHIP = addUnit(new TransformedUnit<>("twp", Units.SQUARE_METRE, MultiplyConverter.of(93239930)), Area.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
