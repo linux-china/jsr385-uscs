@@ -17,6 +17,7 @@ import javax.measure.spi.SystemOfUnits;
  * @author linux_china
  */
 public class USCSUnits extends AbstractSystemOfUnits {
+    public static String NAME_OF_UNITS = "USCS";
 
     private static final USCSUnits INSTANCE = new USCSUnits();
 
@@ -31,13 +32,15 @@ public class USCSUnits extends AbstractSystemOfUnits {
 
     @Override
     public String getName() {
-        return "USCS";
+        return NAME_OF_UNITS;
     }
 
     // //////////////
     // Length //
     // //////////////
-    public static final Unit<Length> INCH = addUnit(new TransformedUnit<>("in", Units.METRE, MultiplyConverter.of(25.4 / 1000)), Length.class);
+    public static final Unit<Length> POINT = addUnit(new TransformedUnit<>("p", Units.METRE, MultiplyConverter.of(0.000352778)), Length.class);
+    public static final Unit<Length> PICA = addUnit(new TransformedUnit<>("P̸", Units.METRE, MultiplyConverter.of(0.004233)), Length.class);
+    public static final Unit<Length> INCH = addUnit(new TransformedUnit<>("in", Units.METRE, MultiplyConverter.of(0.0254)), Length.class);
     public static final Unit<Length> FOOT = addUnit(new TransformedUnit<>("ft", Units.METRE, MultiplyConverter.of(0.3048)), Length.class);
     public static final Unit<Length> YARD = addUnit(new TransformedUnit<>("yd", Units.METRE, MultiplyConverter.of(0.9144)), Length.class);
     public static final Unit<Length> MILE = addUnit(new TransformedUnit<>("mi", Units.METRE, MultiplyConverter.of(1609.344)), Length.class);
