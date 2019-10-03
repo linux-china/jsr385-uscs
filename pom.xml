@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <name>jsr385-uscs</name>
-    <description>JSR 385 for USCS</description>
+    <description>JSR 385 Extension for USCS</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
