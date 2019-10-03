@@ -24,6 +24,7 @@ Unit Extensions of Measurement API 2.0 for USCS https://en.wikipedia.org/wiki/Un
 
 ### Temperature
 
+* Fahrenheit:  Kelvin =  (F + 459.67) * 5.0 / 9.0
 
 # References
 
