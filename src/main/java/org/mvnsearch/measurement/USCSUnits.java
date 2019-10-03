@@ -1,5 +1,6 @@
 package org.mvnsearch.measurement;
 
+import org.mvnsearch.measurement.temperature.FahrenheitToKelvinConverter;
 import tech.units.indriya.AbstractSystemOfUnits;
 import tech.units.indriya.AbstractUnit;
 import tech.units.indriya.function.MultiplyConverter;
@@ -10,6 +11,7 @@ import javax.measure.Quantity;
 import javax.measure.Unit;
 import javax.measure.quantity.Area;
 import javax.measure.quantity.Length;
+import javax.measure.quantity.Temperature;
 import javax.measure.spi.SystemOfUnits;
 
 /**
@@ -53,6 +55,11 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Area> ACRE = addUnit(new TransformedUnit<>("acre", Units.SQUARE_METRE, MultiplyConverter.of(4046.873)), Area.class);
     public static final Unit<Area> SECTION = addUnit(new TransformedUnit<>("section", Units.SQUARE_METRE, MultiplyConverter.of(2589998)), Area.class);
     public static final Unit<Area> TOWNSHIP = addUnit(new TransformedUnit<>("twp", Units.SQUARE_METRE, MultiplyConverter.of(93239930)), Area.class);
+
+    // //////////////
+    // temperature //
+    // //////////////
+    public static final Unit<Temperature> Fahrenheit = addUnit(new TransformedUnit<>("°F", Units.KELVIN,  FahrenheitToKelvinConverter.INSTANCE), Temperature.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
