@@ -7,6 +7,12 @@ Unit Extensions of Measurement API 2.0 for USCS https://en.wikipedia.org/wiki/Un
 
 ### Length
 
+* POINT: 0.000352778 m
+* PICA: 0.004233 m
+* INCH: 0.0254 m
+* FOOT: 0.3048 m
+* YARD: 0.9144 m
+* MILE: 1609.344 m
 
 ### Area
 
