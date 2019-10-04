@@ -12,6 +12,9 @@ import javax.measure.Unit;
 import javax.measure.quantity.*;
 import javax.measure.spi.SystemOfUnits;
 
+import static javax.measure.MetricPrefix.MICRO;
+import static javax.measure.MetricPrefix.MILLI;
+
 /**
  * USCS Units
  *
@@ -39,9 +42,9 @@ public class USCSUnits extends AbstractSystemOfUnits {
     // //////////////
     // Length //
     // //////////////
-    public static final Unit<Length> POINT = addUnit(new TransformedUnit<>("p", Units.METRE, MultiplyConverter.of(0.000352778)), Length.class);
-    public static final Unit<Length> PICA = addUnit(new TransformedUnit<>("P̸", Units.METRE, MultiplyConverter.of(0.004233)), Length.class);
-    public static final Unit<Length> INCH = addUnit(new TransformedUnit<>("in", Units.METRE, MultiplyConverter.of(0.0254)), Length.class);
+    public static final Unit<Length> POINT = addUnit(new TransformedUnit<>("p", MICRO(Units.METRE), MultiplyConverter.of(352.778)), Length.class);
+    public static final Unit<Length> PICA = addUnit(new TransformedUnit<>("P̸", MILLI(Units.METRE), MultiplyConverter.of(4.233)), Length.class);
+    public static final Unit<Length> INCH = addUnit(new TransformedUnit<>("in", MILLI(Units.METRE), MultiplyConverter.of(25.4)), Length.class);
     public static final Unit<Length> FOOT = addUnit(new TransformedUnit<>("ft", Units.METRE, MultiplyConverter.of(0.3048)), Length.class);
     public static final Unit<Length> YARD = addUnit(new TransformedUnit<>("yd", Units.METRE, MultiplyConverter.of(0.9144)), Length.class);
     public static final Unit<Length> MILE = addUnit(new TransformedUnit<>("mi", Units.METRE, MultiplyConverter.of(1609.344)), Length.class);
@@ -60,8 +63,8 @@ public class USCSUnits extends AbstractSystemOfUnits {
     // //////////////
     // Area //
     // //////////////
-    public static final Unit<Area> SQUARE_FOOT = addUnit(new TransformedUnit<>("ft2", Units.SQUARE_METRE, MultiplyConverter.of(0.09290341)), Area.class);
-    public static final Unit<Area> SQUARE_CHAIN = addUnit(new TransformedUnit<>("ch2", Units.SQUARE_METRE, MultiplyConverter.of(404.6873)), Area.class);
+    public static final Unit<Area> SQUARE_FOOT = addUnit(new TransformedUnit<>("sq ft", Units.SQUARE_METRE, MultiplyConverter.of(0.09290341)), Area.class);
+    public static final Unit<Area> SQUARE_CHAIN = addUnit(new TransformedUnit<>("sq ch", Units.SQUARE_METRE, MultiplyConverter.of(404.6873)), Area.class);
     public static final Unit<Area> ACRE = addUnit(new TransformedUnit<>("acre", Units.SQUARE_METRE, MultiplyConverter.of(4046.873)), Area.class);
     public static final Unit<Area> SECTION = addUnit(new TransformedUnit<>("section", Units.SQUARE_METRE, MultiplyConverter.of(2589998)), Area.class);
     public static final Unit<Area> TOWNSHIP = addUnit(new TransformedUnit<>("twp", Units.SQUARE_METRE, MultiplyConverter.of(93239930)), Area.class);
@@ -69,18 +72,18 @@ public class USCSUnits extends AbstractSystemOfUnits {
     // //////////////
     // capacity and volume //
     // //////////////
-    public static final Unit<Volume> CUBIC_INCH = addUnit(new TransformedUnit<>("in3", Units.LITRE, MultiplyConverter.of(0.016387064)), Volume.class);
-    public static final Unit<Volume> CUBIC_FOOT = addUnit(new TransformedUnit<>("ft3", Units.LITRE, MultiplyConverter.of(28.316846592)), Volume.class);
-    public static final Unit<Volume> CUBIC_YARD = addUnit(new TransformedUnit<>("yd3", Units.LITRE, MultiplyConverter.of(764.554857984)), Volume.class);
+    public static final Unit<Volume> CUBIC_INCH = addUnit(new TransformedUnit<>("cu in", MILLI(Units.LITRE), MultiplyConverter.of(16.387064)), Volume.class);
+    public static final Unit<Volume> CUBIC_FOOT = addUnit(new TransformedUnit<>("cu ft", Units.LITRE, MultiplyConverter.of(28.316846592)), Volume.class);
+    public static final Unit<Volume> CUBIC_YARD = addUnit(new TransformedUnit<>("cu yd", Units.LITRE, MultiplyConverter.of(764.554857984)), Volume.class);
     public static final Unit<Volume> ACRE_FOOT = addUnit(new TransformedUnit<>("acre ft", Units.CUBIC_METRE, MultiplyConverter.of(1233.482)), Volume.class);
 
     // fluid volume
-    public static final Unit<Volume> FLUID_DRAM = addUnit(new TransformedUnit<>("fl dr", Units.LITRE, MultiplyConverter.of(0.0036966911953125)), Volume.class);
-    public static final Unit<Volume> FLUID_OUNCE = addUnit(new TransformedUnit<>("fl oz", Units.LITRE, MultiplyConverter.of(0.0295735295625)), Volume.class);
+    public static final Unit<Volume> FLUID_DRAM = addUnit(new TransformedUnit<>("fl dr", MILLI(Units.LITRE), MultiplyConverter.of(3.6966911953125)), Volume.class);
+    public static final Unit<Volume> FLUID_OUNCE = addUnit(new TransformedUnit<>("fl oz", MILLI(Units.LITRE), MultiplyConverter.of(29.5735295625)), Volume.class);
     public static final Unit<Volume> GILL = addUnit(new TransformedUnit<>("gi", Units.LITRE, MultiplyConverter.of(0.11829411825)), Volume.class);
-    public static final Unit<Volume> TEA_SPOON = addUnit(new TransformedUnit<>("tsp", Units.LITRE, MultiplyConverter.of(0.00492892159375)), Volume.class);
-    public static final Unit<Volume> TABLE_SPOON = addUnit(new TransformedUnit<>("Tbsp", Units.LITRE, MultiplyConverter.of(0.01479)), Volume.class);
-    public static final Unit<Volume> CUP = addUnit(new TransformedUnit<>("cp", Units.LITRE, MultiplyConverter.of(0.2365882365)), Volume.class);
+    public static final Unit<Volume> TEA_SPOON = addUnit(new TransformedUnit<>("tsp", MILLI(Units.LITRE), MultiplyConverter.of(4.92892159375)), Volume.class);
+    public static final Unit<Volume> TABLE_SPOON = addUnit(new TransformedUnit<>("Tbsp", MILLI(Units.LITRE), MultiplyConverter.of(14.78676478125)), Volume.class);
+    public static final Unit<Volume> CUP = addUnit(new TransformedUnit<>("cp", MILLI(Units.LITRE), MultiplyConverter.of(236.5882365)), Volume.class);
     public static final Unit<Volume> LIQUID_PINT = addUnit(new TransformedUnit<>("pt", Units.LITRE, MultiplyConverter.of(0.473176473)), Volume.class);
     public static final Unit<Volume> LIQUID_QUART = addUnit(new TransformedUnit<>("qt", Units.LITRE, MultiplyConverter.of(0.946352946)), Volume.class);
     public static final Unit<Volume> LIQUID_GALLON = addUnit(new TransformedUnit<>("gal", Units.LITRE, MultiplyConverter.of(3.785411784)), Volume.class);
@@ -96,8 +99,9 @@ public class USCSUnits extends AbstractSystemOfUnits {
     // //////////////
     // weight and mass //
     // //////////////
-    public static final Unit<Mass> DRAM = addUnit(new TransformedUnit<>("dr", Units.KILOGRAM, MultiplyConverter.of(0.0017718451953125)), Mass.class);
-    public static final Unit<Mass> OUNCE = addUnit(new TransformedUnit<>("oz", Units.KILOGRAM, MultiplyConverter.of(0.028349523125)), Mass.class);
+    public static final Unit<Mass> GAIN = addUnit(new TransformedUnit<>("gr", MICRO(Units.KILOGRAM), MultiplyConverter.of(64.79891)), Mass.class);
+    public static final Unit<Mass> DRAM = addUnit(new TransformedUnit<>("dr", MILLI(Units.KILOGRAM), MultiplyConverter.of(1.7718451953125)), Mass.class);
+    public static final Unit<Mass> OUNCE = addUnit(new TransformedUnit<>("oz", MILLI(Units.KILOGRAM), MultiplyConverter.of(28.349523125)), Mass.class);
     public static final Unit<Mass> POUND = addUnit(new TransformedUnit<>("lb", Units.KILOGRAM, MultiplyConverter.of(0.45359237)), Mass.class);
     public static final Unit<Mass> ton = addUnit(new TransformedUnit<>("short ton", Units.KILOGRAM, MultiplyConverter.of(907.18474)), Mass.class);
 
