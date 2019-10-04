@@ -9,9 +9,7 @@ import tech.units.indriya.unit.Units;
 
 import javax.measure.Quantity;
 import javax.measure.Unit;
-import javax.measure.quantity.Area;
-import javax.measure.quantity.Length;
-import javax.measure.quantity.Temperature;
+import javax.measure.quantity.*;
 import javax.measure.spi.SystemOfUnits;
 
 /**
@@ -57,9 +55,49 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Area> TOWNSHIP = addUnit(new TransformedUnit<>("twp", Units.SQUARE_METRE, MultiplyConverter.of(93239930)), Area.class);
 
     // //////////////
+    // capacity and volume //
+    // //////////////
+    public static final Unit<Volume> CUBIC_INCH = addUnit(new TransformedUnit<>("in3", Units.LITRE, MultiplyConverter.of(0.016387064)), Volume.class);
+    public static final Unit<Volume> CUBIC_FOOT = addUnit(new TransformedUnit<>("ft3", Units.LITRE, MultiplyConverter.of(28.316846592)), Volume.class);
+    public static final Unit<Volume> CUBIC_YARD = addUnit(new TransformedUnit<>("yd3", Units.LITRE, MultiplyConverter.of(764.554857984)), Volume.class);
+
+    // fluid volume
+    public static final Unit<Volume> FLUID_DRAM = addUnit(new TransformedUnit<>("fl dr", Units.LITRE, MultiplyConverter.of(0.0036966911953125)), Volume.class);
+    public static final Unit<Volume> FLUID_OUNCE = addUnit(new TransformedUnit<>("fl oz", Units.LITRE, MultiplyConverter.of(0.0295735295625)), Volume.class);
+    public static final Unit<Volume> GILL = addUnit(new TransformedUnit<>("gi", Units.LITRE, MultiplyConverter.of(0.11829411825)), Volume.class);
+    public static final Unit<Volume> TEA_SPOON = addUnit(new TransformedUnit<>("tsp", Units.LITRE, MultiplyConverter.of(0.00492892159375)), Volume.class);
+    public static final Unit<Volume> TABLE_SPOON = addUnit(new TransformedUnit<>("Tbsp", Units.LITRE, MultiplyConverter.of(0.01479)), Volume.class);
+    public static final Unit<Volume> CUP = addUnit(new TransformedUnit<>("cp", Units.LITRE, MultiplyConverter.of(0.2365882365)), Volume.class);
+    public static final Unit<Volume> LIQUID_PINT = addUnit(new TransformedUnit<>("pt", Units.LITRE, MultiplyConverter.of(0.473176473)), Volume.class);
+    public static final Unit<Volume> LIQUID_QUART = addUnit(new TransformedUnit<>("qt", Units.LITRE, MultiplyConverter.of(0.946352946)), Volume.class);
+    public static final Unit<Volume> LIQUID_GALLON = addUnit(new TransformedUnit<>("gal", Units.LITRE, MultiplyConverter.of(3.785411784)), Volume.class);
+    public static final Unit<Volume> LIQUID_BARREL = addUnit(new TransformedUnit<>("bbl", Units.LITRE, MultiplyConverter.of(119.240471196)), Volume.class);
+    public static final Unit<Volume> OIL_BARREL = addUnit(new TransformedUnit<>("bbl", Units.LITRE, MultiplyConverter.of(158.987294928)), Volume.class);
+
+    //dry volume
+    public static final Unit<Volume> DRY_PINT = addUnit(new TransformedUnit<>("pt", Units.LITRE, MultiplyConverter.of(0.5506104713575)), Volume.class);
+    public static final Unit<Volume> DRY_QUART = addUnit(new TransformedUnit<>("qt", Units.LITRE, MultiplyConverter.of(1.101221)), Volume.class);
+    public static final Unit<Volume> DRY_GALLON = addUnit(new TransformedUnit<>("gal", Units.LITRE, MultiplyConverter.of(4.404884)), Volume.class);
+    public static final Unit<Volume> DRY_BARREL = addUnit(new TransformedUnit<>("bbl", Units.LITRE, MultiplyConverter.of(115.6271)), Volume.class);
+
+    // //////////////
+    // weight and mass //
+    // //////////////
+    public static final Unit<Mass> DRAM = addUnit(new TransformedUnit<>("dr", Units.KILOGRAM, MultiplyConverter.of(0.0017718451953125)), Mass.class);
+    public static final Unit<Mass> OUNCE = addUnit(new TransformedUnit<>("oz", Units.KILOGRAM, MultiplyConverter.of(0.028349523125)), Mass.class);
+    public static final Unit<Mass> POUND = addUnit(new TransformedUnit<>("lb", Units.KILOGRAM, MultiplyConverter.of(0.45359237)), Mass.class);
+    public static final Unit<Mass> ton = addUnit(new TransformedUnit<>("short ton", Units.KILOGRAM, MultiplyConverter.of(907.18474)), Mass.class);
+
+    // //////////////
     // temperature //
     // //////////////
-    public static final Unit<Temperature> Fahrenheit = addUnit(new TransformedUnit<>("°F", Units.KELVIN,  FahrenheitToKelvinConverter.INSTANCE), Temperature.class);
+    public static final Unit<Temperature> Fahrenheit = addUnit(new TransformedUnit<>("°F", Units.KELVIN, FahrenheitToKelvinConverter.INSTANCE), Temperature.class);
+
+
+    //////////////
+    //// misc ///
+    //////////////
+    public static final Unit<Energy> calorie = addUnit(new TransformedUnit<>("cal", Units.JOULE, MultiplyConverter.of(4.184)), Energy.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
