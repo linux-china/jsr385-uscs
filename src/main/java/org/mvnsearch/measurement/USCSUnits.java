@@ -46,6 +46,11 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Length> YARD = addUnit(new TransformedUnit<>("yd", Units.METRE, MultiplyConverter.of(0.9144)), Length.class);
     public static final Unit<Length> MILE = addUnit(new TransformedUnit<>("mi", Units.METRE, MultiplyConverter.of(1609.344)), Length.class);
     public static final Unit<Length> RACK_UNIT = addUnit(new TransformedUnit<>("U", Units.METRE, MultiplyConverter.of(0.04445)), Length.class);
+    public static final Unit<Length> LINK = addUnit(new TransformedUnit<>("li", Units.METRE, MultiplyConverter.of(20.117)), Length.class);
+    public static final Unit<Length> ROD = addUnit(new TransformedUnit<>("rd", Units.METRE, MultiplyConverter.of(5.029)), Length.class);
+    public static final Unit<Length> CHAIN = addUnit(new TransformedUnit<>("ch", Units.METRE, MultiplyConverter.of(20.116)), Length.class);
+    public static final Unit<Length> FURLONG = addUnit(new TransformedUnit<>("fur", Units.METRE, MultiplyConverter.of(201.168)), Length.class);
+    public static final Unit<Length> LEAGUE = addUnit(new TransformedUnit<>("lea", Units.METRE, MultiplyConverter.of(4828)), Length.class);
 
     // //////////////
     // SPEED //
@@ -56,6 +61,7 @@ public class USCSUnits extends AbstractSystemOfUnits {
     // Area //
     // //////////////
     public static final Unit<Area> SQUARE_FOOT = addUnit(new TransformedUnit<>("ft2", Units.SQUARE_METRE, MultiplyConverter.of(0.09290341)), Area.class);
+    public static final Unit<Area> SQUARE_CHAIN = addUnit(new TransformedUnit<>("ch2", Units.SQUARE_METRE, MultiplyConverter.of(404.6873)), Area.class);
     public static final Unit<Area> ACRE = addUnit(new TransformedUnit<>("acre", Units.SQUARE_METRE, MultiplyConverter.of(4046.873)), Area.class);
     public static final Unit<Area> SECTION = addUnit(new TransformedUnit<>("section", Units.SQUARE_METRE, MultiplyConverter.of(2589998)), Area.class);
     public static final Unit<Area> TOWNSHIP = addUnit(new TransformedUnit<>("twp", Units.SQUARE_METRE, MultiplyConverter.of(93239930)), Area.class);
@@ -66,6 +72,7 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Volume> CUBIC_INCH = addUnit(new TransformedUnit<>("in3", Units.LITRE, MultiplyConverter.of(0.016387064)), Volume.class);
     public static final Unit<Volume> CUBIC_FOOT = addUnit(new TransformedUnit<>("ft3", Units.LITRE, MultiplyConverter.of(28.316846592)), Volume.class);
     public static final Unit<Volume> CUBIC_YARD = addUnit(new TransformedUnit<>("yd3", Units.LITRE, MultiplyConverter.of(764.554857984)), Volume.class);
+    public static final Unit<Volume> ACRE_FOOT = addUnit(new TransformedUnit<>("acre ft", Units.CUBIC_METRE, MultiplyConverter.of(1233.482)), Volume.class);
 
     // fluid volume
     public static final Unit<Volume> FLUID_DRAM = addUnit(new TransformedUnit<>("fl dr", Units.LITRE, MultiplyConverter.of(0.0036966911953125)), Volume.class);
