@@ -112,6 +112,7 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Mass> POUND = addUnit(new TransformedUnit<>("lb", Units.KILOGRAM, MultiplyConverter.of(45.359237)), Mass.class);
     public static final Unit<Mass> HUNDRED_WEIGHT = addUnit(new TransformedUnit<>("cwt", Units.KILOGRAM, MultiplyConverter.of(0.45359237)), Mass.class);
     public static final Unit<Mass> TON = addUnit(new TransformedUnit<>("short ton", Units.KILOGRAM, MultiplyConverter.of(907.18474)), Mass.class);
+    public static final Unit<Mass> SLUG = addUnit(new TransformedUnit<>("slug", Units.KILOGRAM, MultiplyConverter.of(14.5939029)), Mass.class);
 
     // //////////////
     // temperature //
@@ -122,7 +123,10 @@ public class USCSUnits extends AbstractSystemOfUnits {
     //// misc ///
     //////////////
     public static final Unit<Energy> CALORIE = addUnit(new TransformedUnit<>("cal", Units.JOULE, MultiplyConverter.of(4.184)), Energy.class);
+    public static final Unit<Energy> BRITISH_THERMAL_UNIT = addUnit(new TransformedUnit<>("Btu", Units.JOULE, MultiplyConverter.of(1055)), Energy.class);
+    public static final Unit<Energy> FOOT_POUND = addUnit(new TransformedUnit<>("foot pound", Units.JOULE, MultiplyConverter.of(1.356)), Energy.class);
     public static final Unit<Power> HORSE_POWER = addUnit(new TransformedUnit<>("hp", Units.WATT, MultiplyConverter.of(745.7)), Energy.class);
+    public static final Unit<Power> TON_OF_REFRIGERATION = addUnit(new TransformedUnit<>("TR", Units.WATT, MultiplyConverter.of(3517)), Energy.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
