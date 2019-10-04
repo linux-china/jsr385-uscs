@@ -12,8 +12,7 @@ import javax.measure.Unit;
 import javax.measure.quantity.*;
 import javax.measure.spi.SystemOfUnits;
 
-import static javax.measure.MetricPrefix.MICRO;
-import static javax.measure.MetricPrefix.MILLI;
+import static javax.measure.MetricPrefix.*;
 
 /**
  * USCS Units
@@ -127,6 +126,7 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Energy> FOOT_POUND = addUnit(new TransformedUnit<>("foot pound", Units.JOULE, MultiplyConverter.of(1.356)), Energy.class);
     public static final Unit<Power> HORSE_POWER = addUnit(new TransformedUnit<>("hp", Units.WATT, MultiplyConverter.of(745.7)), Energy.class);
     public static final Unit<Power> TON_OF_REFRIGERATION = addUnit(new TransformedUnit<>("TR", Units.WATT, MultiplyConverter.of(3517)), Energy.class);
+    public static final Unit<Pressure> POUND_PER_SQUARE_INCH = addUnit(new TransformedUnit<>("psi", KILO(Units.PASCAL), MultiplyConverter.of(6.89475729)), Pressure.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
