@@ -48,6 +48,11 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Length> RACK_UNIT = addUnit(new TransformedUnit<>("U", Units.METRE, MultiplyConverter.of(0.04445)), Length.class);
 
     // //////////////
+    // SPEED //
+    // //////////////
+    public static final Unit<Speed> MILE_PER_HOUR = addUnit(new TransformedUnit<>("mph", Units.METRE_PER_SECOND, MultiplyConverter.of(0.44704)), Speed.class);
+
+    // //////////////
     // Area //
     // //////////////
     public static final Unit<Area> SQUARE_FOOT = addUnit(new TransformedUnit<>("ft2", Units.SQUARE_METRE, MultiplyConverter.of(0.09290341)), Area.class);
