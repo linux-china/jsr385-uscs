@@ -45,6 +45,7 @@ public class USCSUnits extends AbstractSystemOfUnits {
     public static final Unit<Length> FOOT = addUnit(new TransformedUnit<>("ft", Units.METRE, MultiplyConverter.of(0.3048)), Length.class);
     public static final Unit<Length> YARD = addUnit(new TransformedUnit<>("yd", Units.METRE, MultiplyConverter.of(0.9144)), Length.class);
     public static final Unit<Length> MILE = addUnit(new TransformedUnit<>("mi", Units.METRE, MultiplyConverter.of(1609.344)), Length.class);
+    public static final Unit<Length> RACK_UNIT = addUnit(new TransformedUnit<>("U", Units.METRE, MultiplyConverter.of(0.04445)), Length.class);
 
     // //////////////
     // Area //
@@ -97,7 +98,8 @@ public class USCSUnits extends AbstractSystemOfUnits {
     //////////////
     //// misc ///
     //////////////
-    public static final Unit<Energy> calorie = addUnit(new TransformedUnit<>("cal", Units.JOULE, MultiplyConverter.of(4.184)), Energy.class);
+    public static final Unit<Energy> CALORIE = addUnit(new TransformedUnit<>("cal", Units.JOULE, MultiplyConverter.of(4.184)), Energy.class);
+    public static final Unit<Power> HORSE_POWER = addUnit(new TransformedUnit<>("hp", Units.WATT, MultiplyConverter.of(745.7)), Energy.class);
 
     /**
      * Adds a new unit and maps it to the specified quantity type.
